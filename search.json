@@ -1,0 +1,8 @@
+---
+layout: null
+---
+[
+{% for doc in site.wiki %}{"title":{{ doc.title | jsonify }},"url":{{ doc.url | relative_url | jsonify }},"group":{{ doc.group | jsonify }}}{% unless forloop.last %},{% endunless %}
+{% endfor %}{% if site.posts.size > 0 %},{% for post in site.posts %}{"title":{{ post.title | jsonify }},"url":{{ post.url | relative_url | jsonify }},"group":"文章杂记"}{% unless forloop.last %},{% endunless %}
+{% endfor %}{% endif %}
+]

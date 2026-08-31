@@ -1,6 +1,6 @@
 ---
 layout: home
-title: 技术文章
+title: 文章杂记
 list_title: 文章列表
 ---
 

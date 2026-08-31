@@ -4,7 +4,7 @@
 
 ## 内容结构
 
-- **技术文章**（首页）`_posts/`：日常分享文章，按时间排列
+- **文章杂记**（首页）`_posts/`：日常分享文章，按时间排列
 - **Wiki 知识库**（`/wiki/`）：系统化手册文档
   - `渗透测试` → `_wiki/pentest/`
   - `安全加固` → `_wiki/hardening/`
@@ -14,12 +14,12 @@
 
 ```
 ├─ _config.yml          # 站点配置（collections、导航）
-├─ index.md             # 首页：技术文章
+├─ index.md             # 首页：文章杂记
 ├─ wiki.md              # Wiki 入口
 ├─ wiki-pentest.md      # 渗透测试分类页
 ├─ wiki-hardening.md    # 安全加固分类页
 ├─ wiki-incident.md     # 应急响应分类页
-├─ _posts/              # 技术文章（YYYY-MM-DD-标题.md）
+├─ _posts/              # 文章杂记（YYYY-MM-DD-标题.md）
 ├─ _wiki/               # Wiki 知识库（按分类分子目录）
 │  ├─ pentest/          #   渗透测试
 │  ├─ hardening/        #   安全加固
