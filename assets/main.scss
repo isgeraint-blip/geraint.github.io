@@ -335,8 +335,6 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin: 1.2em 0;
-  display: block;
-  overflow-x: auto;
 }
 
 th,
@@ -355,6 +353,36 @@ th {
 
 tr:nth-child(even) td {
   background: rgba(255, 255, 255, 0.02);
+}
+
+/* Wiki 分类导航表格：蓝底白字 */
+.wiki-nav-table {
+  border: none;
+}
+
+.wiki-nav-table th {
+  background: #1e3a8a;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.wiki-nav-table td,
+.wiki-nav-table tr:nth-child(even) td {
+  background: #1d4ed8;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.wiki-nav-table a,
+.wiki-nav-table a:visited {
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.wiki-nav-table a:hover {
+  color: #dbeafe;
+  text-decoration: underline;
 }
 
 /* ===== 页脚 ===== */
