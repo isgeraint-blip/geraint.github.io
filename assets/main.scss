@@ -348,6 +348,7 @@ table {
   border-collapse: collapse;
   margin: 1.2em 0;
   border: none;
+  color: #e6edf3;
 }
 
 table th,
@@ -364,8 +365,9 @@ table th {
   font-weight: 600;
 }
 
-table tr:nth-child(even) td {
-  background: rgba(110, 118, 129, 0.06);
+/* 覆盖 minima 默认的浅色斑马纹 #f7f7f7 */
+table tr:nth-child(even) {
+  background-color: rgba(110, 118, 129, 0.08);
 }
 
 /* Wiki 分类导航卡片 */
@@ -421,6 +423,13 @@ table tr:nth-child(even) td {
 
 .site-footer a {
   color: #58a6ff;
+}
+
+.disclaimer {
+  color: #6e7681;
+  font-size: 13px;
+  margin: 0;
+  text-align: center;
 }
 
 /* ===== 移动端适配 ===== */
