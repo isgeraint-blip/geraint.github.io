@@ -298,10 +298,11 @@ pre {
   border-radius: 10px;
   padding: 16px 20px;
   overflow-x: auto;
+  color: #e6edf3;
 }
 
 pre code {
-  color: #c9d1d9;
+  color: #e6edf3;
   background: transparent;
   padding: 0;
 }
@@ -311,22 +312,30 @@ pre code {
   background: transparent;
 }
 
+/* 兜底：所有 token 默认亮色，覆盖 minima 默认的深色值 */
+.highlight span {
+  color: #e6edf3;
+}
+
 .highlight .k, .highlight .kd, .highlight .kn,
 .highlight .kr, .highlight .kt, .highlight .kc,
-.highlight .kp { color: #ff7b72; font-weight: bold; }
+.highlight .kp, .highlight .ow { color: #ff7b72; font-weight: bold; }
 .highlight .s, .highlight .s1, .highlight .s2,
-.highlight .sb, .highlight .sd, .highlight .sx { color: #a5d6ff; }
+.highlight .sb, .highlight .sd, .highlight .sx,
+.highlight .se, .highlight .sh, .highlight .si,
+.highlight .sr, .highlight .ss { color: #a5d6ff; }
 .highlight .c, .highlight .c1, .highlight .cm,
 .highlight .cd, .highlight .cp { color: #8b949e; font-style: italic; }
 .highlight .m, .highlight .mi, .highlight .mf,
-.highlight .mh, .highlight .mo { color: #79c0ff; }
+.highlight .mh, .highlight .mo, .highlight .il { color: #79c0ff; }
 .highlight .nf { color: #d2a8ff; }
 .highlight .nb, .highlight .na, .highlight .no,
-.highlight .nv { color: #79c0ff; }
+.highlight .nv, .highlight .vc, .highlight .vg,
+.highlight .vi, .highlight .bp { color: #79c0ff; }
 .highlight .o { color: #ff7b72; }
-.highlight .nc, .highlight .nn { color: #ffa657; }
+.highlight .nc, .highlight .nn, .highlight .ni { color: #ffa657; }
 .highlight .nt { color: #7ee787; }
-.highlight .p { color: #c9d1d9; }
+.highlight .p { color: #e6edf3; }
 .highlight .err { color: #ff7b72; background: transparent; }
 .highlight .gd, .highlight .gi, .highlight .gh { background: transparent; }
 
@@ -355,34 +364,48 @@ tr:nth-child(even) td {
   background: rgba(110, 118, 129, 0.06);
 }
 
-/* Wiki 分类导航表格：蓝底白字 */
-.wiki-nav-table {
-  border: none;
+/* Wiki 分类导航卡片 */
+.wiki-cat-list {
+  list-style: none;
+  margin-left: 0;
 }
 
-.wiki-nav-table th {
-  background: linear-gradient(120deg, #1f6ea8, #178a96);
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+.wiki-cat-list li {
+  background: rgba(33, 38, 47, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(240, 246, 252, 0.1);
+  border-radius: 14px;
+  margin-bottom: 16px;
+  transition: transform 0.16s ease, border-color 0.16s ease;
 }
 
-.wiki-nav-table td,
-.wiki-nav-table tr:nth-child(even) td {
-  background: #14324d;
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+.wiki-cat-list li:hover {
+  transform: translateY(-3px);
+  border-color: rgba(88, 166, 255, 0.5);
 }
 
-.wiki-nav-table a,
-.wiki-nav-table a:visited {
-  color: #ffffff;
-  font-weight: 600;
+.wiki-cat-link {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 20px 26px;
   text-decoration: none;
 }
 
-.wiki-nav-table a:hover {
-  color: #52e0e0;
-  text-decoration: underline;
+.wiki-cat-name {
+  font-size: 19px;
+  font-weight: 700;
+  color: #e6edf3;
+}
+
+.wiki-cat-list li:hover .wiki-cat-name {
+  color: #58a6ff;
+}
+
+.wiki-cat-count {
+  font-size: 14px;
+  color: #8b949e;
 }
 
 /* ===== 页脚 ===== */
