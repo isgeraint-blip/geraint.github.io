@@ -4,31 +4,31 @@
 @import "minima";
 
 /* ================================================================
-   深色主题：深蓝黑 + 青蓝强调 + 绿点缀（科技感）
+   深色主题：近黑背景 + 蓝色主调 + 青绿 accent（参考 Clarity）
    仅本地资源，无第三方 CDN / JS
    ================================================================ */
 
 /* ===== 全局背景与文字 ===== */
 body {
-  background-color: #020618;
-  background-image: linear-gradient(180deg, #020618 0%, #0a0f24 55%, #0f172b 100%);
+  background-color: #121212;
+  background-image: linear-gradient(180deg, #111418 0%, #15181e 60%, #181c23 100%);
   background-attachment: fixed;
-  color: #e2e8f0;
+  color: #c9d1d9;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   line-height: 1.7;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #f1f5f9;
+  color: #e6edf3;
 }
 
 a {
-  color: #00a5ef;
+  color: #58a6ff;
 }
 
 a:hover {
-  color: #00bcfe;
+  color: #52e0e0;
 }
 
 /* ===== 容器 ===== */
@@ -37,28 +37,28 @@ a:hover {
   padding: 0 24px;
 }
 
-/* ===== 顶部导航 ===== */
+/* ===== 顶部导航：玻璃拟态 ===== */
 .site-header {
-  background: rgba(2, 6, 24, 0.65);
+  background: rgba(15, 17, 21, 0.7);
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   border-top: none;
-  border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+  border-bottom: 1px solid rgba(240, 246, 252, 0.1);
 }
 
 .site-title,
 .site-title:visited {
   font-weight: 700;
-  color: #f1f5f9;
+  color: #e6edf3;
 }
 
 .site-nav .page-link,
 .site-nav .page-link:visited {
-  color: #e2e8f0;
+  color: #c9d1d9;
 }
 
 .site-nav .page-link:hover {
-  color: #00a5ef;
+  color: #58a6ff;
 }
 
 .page-content {
@@ -70,7 +70,7 @@ a:hover {
   font-size: 30px;
   font-weight: 700;
   margin-bottom: 24px;
-  color: #f1f5f9;
+  color: #e6edf3;
 }
 
 /* ===== 顶部布局（flex + 搜索框） ===== */
@@ -97,10 +97,10 @@ a:hover {
 }
 
 .search-box input {
-  background: rgba(2, 6, 24, 0.6);
-  border: 1px solid rgba(148, 163, 184, 0.25);
+  background: rgba(13, 17, 23, 0.7);
+  border: 1px solid rgba(240, 246, 252, 0.15);
   border-radius: 999px;
-  color: #e2e8f0;
+  color: #c9d1d9;
   padding: 8px 18px;
   font-size: 14px;
   width: 180px;
@@ -109,11 +109,11 @@ a:hover {
 }
 
 .search-box input::placeholder {
-  color: rgba(148, 163, 184, 0.6);
+  color: #6e7681;
 }
 
 .search-box input:focus {
-  border-color: #00a5ef;
+  border-color: #58a6ff;
   width: 230px;
 }
 
@@ -125,8 +125,8 @@ a:hover {
   min-width: 280px;
   max-height: 420px;
   overflow-y: auto;
-  background: rgba(6, 12, 30, 0.98);
-  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: rgba(17, 22, 30, 0.98);
+  border: 1px solid rgba(240, 246, 252, 0.12);
   border-radius: 12px;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
   display: none;
@@ -144,27 +144,27 @@ a:hover {
 }
 
 .search-item:hover {
-  background: rgba(0, 165, 239, 0.12);
+  background: rgba(88, 166, 255, 0.12);
 }
 
 .search-item-title {
-  color: #f1f5f9;
+  color: #e6edf3;
   font-size: 14px;
 }
 
 .search-item:hover .search-item-title {
-  color: #00bcfe;
+  color: #58a6ff;
 }
 
 .search-item-group {
-  color: rgba(148, 163, 184, 0.7);
+  color: #6e7681;
   font-size: 12px;
   margin-left: 12px;
   white-space: nowrap;
 }
 
 .search-empty {
-  color: rgba(148, 163, 184, 0.7);
+  color: #6e7681;
   padding: 12px;
   font-size: 14px;
   text-align: center;
@@ -177,10 +177,10 @@ a:hover {
 }
 
 .post-list > li {
-  background: rgba(15, 23, 43, 0.55);
+  background: rgba(33, 38, 47, 0.5);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(148, 163, 184, 0.15);
+  border: 1px solid rgba(240, 246, 252, 0.1);
   border-radius: 14px;
   padding: 22px 28px;
   margin-bottom: 18px;
@@ -190,12 +190,12 @@ a:hover {
 
 .post-list > li:hover {
   transform: translateY(-3px);
-  border-color: rgba(0, 165, 239, 0.5);
+  border-color: rgba(88, 166, 255, 0.5);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
 .post-list .post-meta {
-  color: #94a3b8;
+  color: #8b949e;
   font-size: 14px;
 }
 
@@ -204,20 +204,20 @@ a:hover {
 }
 
 .post-list .post-link {
-  color: #f1f5f9;
+  color: #e6edf3;
   font-weight: 600;
 }
 
 .post-list .post-link:hover {
-  color: #00bcfe;
+  color: #58a6ff;
 }
 
 /* ===== 正文 / 文档卡片 ===== */
 .post {
-  background: rgba(15, 23, 43, 0.55);
+  background: rgba(33, 38, 47, 0.5);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(148, 163, 184, 0.15);
+  border: 1px solid rgba(240, 246, 252, 0.1);
   border-radius: 16px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
   padding: 40px 52px;
@@ -225,33 +225,33 @@ a:hover {
 
 .post-title {
   font-weight: 700;
-  color: #f1f5f9;
+  color: #e6edf3;
 }
 
 .post-header .post-meta {
-  color: #94a3b8;
+  color: #8b949e;
 }
 
 .post-content {
-  color: #e2e8f0;
+  color: #c9d1d9;
 }
 
 .post-content h1,
 .post-content h2,
 .post-content h3,
 .post-content h4 {
-  color: #f1f5f9;
+  color: #e6edf3;
   margin-top: 1.6em;
   margin-bottom: 0.7em;
 }
 
 .post-content h2 {
-  border-left: 4px solid #00a5ef;
+  border-left: 4px solid #52e0e0;
   padding-left: 14px;
 }
 
 .post-content h3 {
-  color: #05df72;
+  color: #58a6ff;
 }
 
 .post-content p {
@@ -263,71 +263,71 @@ a:hover {
 }
 
 .post-content a {
-  color: #00a5ef;
-}
-
-.post-content blockquote {
-  border-left: 4px solid rgba(0, 165, 239, 0.5);
-  color: rgba(226, 232, 240, 0.85);
+  color: #58a6ff;
 }
 
 .post-content strong {
-  color: #05df72;
+  color: #e6edf3;
+}
+
+.post-content blockquote {
+  border-left: 4px solid rgba(82, 224, 224, 0.4);
+  color: #8b949e;
 }
 
 hr {
-  border-color: rgba(148, 163, 184, 0.2);
+  border-color: rgba(240, 246, 252, 0.12);
 }
 
-/* ===== 代码块 ===== */
+/* ===== 代码块（GitHub Dark 风格） ===== */
 pre,
 code {
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
 }
 
 code {
-  color: #00bcfe;
-  background: rgba(2, 6, 24, 0.6);
+  color: #79c0ff;
+  background: rgba(110, 118, 129, 0.25);
   padding: 1px 6px;
   border-radius: 4px;
 }
 
 pre {
-  background: rgba(2, 6, 24, 0.8);
-  border: 1px solid rgba(148, 163, 184, 0.15);
+  background: #0d1117;
+  border: 1px solid rgba(240, 246, 252, 0.1);
   border-radius: 10px;
   padding: 16px 20px;
   overflow-x: auto;
 }
 
 pre code {
-  color: #e2e8f0;
+  color: #c9d1d9;
   background: transparent;
   padding: 0;
 }
 
-/* ===== 深色语法高亮 ===== */
+/* ===== 深色语法高亮（GitHub Dark） ===== */
 .highlight {
   background: transparent;
 }
 
-.highlight .kd, .highlight .k, .highlight .kn,
+.highlight .k, .highlight .kd, .highlight .kn,
 .highlight .kr, .highlight .kt, .highlight .kc,
-.highlight .kp { color: #00bcfe; font-weight: bold; }
+.highlight .kp { color: #ff7b72; font-weight: bold; }
 .highlight .s, .highlight .s1, .highlight .s2,
-.highlight .sb, .highlight .sd, .highlight .sx { color: #05df72; }
+.highlight .sb, .highlight .sd, .highlight .sx { color: #a5d6ff; }
 .highlight .c, .highlight .c1, .highlight .cm,
-.highlight .cd, .highlight .cp { color: #64748b; font-style: italic; }
+.highlight .cd, .highlight .cp { color: #8b949e; font-style: italic; }
 .highlight .m, .highlight .mi, .highlight .mf,
 .highlight .mh, .highlight .mo { color: #79c0ff; }
-.highlight .nf { color: #c4b5fd; }
+.highlight .nf { color: #d2a8ff; }
 .highlight .nb, .highlight .na, .highlight .no,
 .highlight .nv { color: #79c0ff; }
-.highlight .o { color: #7dd3fc; }
-.highlight .nc, .highlight .nn { color: #f472b6; }
-.highlight .nt { color: #f472b6; }
-.highlight .p { color: #e2e8f0; }
-.highlight .err { color: #f87171; background: transparent; }
+.highlight .o { color: #ff7b72; }
+.highlight .nc, .highlight .nn { color: #ffa657; }
+.highlight .nt { color: #7ee787; }
+.highlight .p { color: #c9d1d9; }
+.highlight .err { color: #ff7b72; background: transparent; }
 .highlight .gd, .highlight .gi, .highlight .gh { background: transparent; }
 
 /* ===== 表格 ===== */
@@ -339,20 +339,20 @@ table {
 
 th,
 td {
-  border: 1px solid rgba(148, 163, 184, 0.2);
+  border: 1px solid rgba(240, 246, 252, 0.12);
   padding: 10px 14px;
   text-align: left;
-  color: #e2e8f0;
+  color: #c9d1d9;
 }
 
 th {
-  background: rgba(15, 23, 43, 0.9);
-  color: #00a5ef;
+  background: rgba(33, 38, 47, 0.9);
+  color: #58a6ff;
   font-weight: 600;
 }
 
 tr:nth-child(even) td {
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(110, 118, 129, 0.06);
 }
 
 /* Wiki 分类导航表格：蓝底白字 */
@@ -361,16 +361,16 @@ tr:nth-child(even) td {
 }
 
 .wiki-nav-table th {
-  background: #1e3a8a;
+  background: linear-gradient(120deg, #1f6ea8, #178a96);
   color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .wiki-nav-table td,
 .wiki-nav-table tr:nth-child(even) td {
-  background: #1d4ed8;
+  background: #14324d;
   color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .wiki-nav-table a,
@@ -381,19 +381,19 @@ tr:nth-child(even) td {
 }
 
 .wiki-nav-table a:hover {
-  color: #dbeafe;
+  color: #52e0e0;
   text-decoration: underline;
 }
 
 /* ===== 页脚 ===== */
 .site-footer {
-  background: #020618;
-  border-top: 1px solid rgba(148, 163, 184, 0.15);
-  color: #94a3b8;
+  background: #0d0e11;
+  border-top: 1px solid rgba(240, 246, 252, 0.1);
+  color: #8b949e;
 }
 
 .site-footer a {
-  color: #00a5ef;
+  color: #58a6ff;
 }
 
 /* ===== 移动端适配 ===== */
