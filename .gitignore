@@ -42,3 +42,6 @@ __pycache__/
 dist/
 build/
 *.exe
+
+# 本地部署脚本（不上传仓库）
+deploy.ps1
