@@ -289,6 +289,7 @@ code {
   color: #79c0ff;
   background: rgba(110, 118, 129, 0.25);
   padding: 1px 6px;
+  border: none;
   border-radius: 4px;
 }
 
@@ -308,8 +309,10 @@ pre code {
 }
 
 /* ===== 深色语法高亮（GitHub Dark） ===== */
-.highlight {
-  background: transparent;
+.highlight,
+.highlighter-rouge .highlight,
+pre.highlight {
+  background: #0d1117;
 }
 
 /* 兜底：所有 token 默认亮色，覆盖 minima 默认的深色值 */
