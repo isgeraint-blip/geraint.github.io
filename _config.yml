@@ -1,0 +1,19 @@
+# 站点配置
+title: 我的技术博客
+title_separator: " - "
+email: ""
+description: 分享安全研究、漏洞挖掘与开发笔记
+
+# 项目站需填 "/仓库名"，用户站(username.github.io)留空
+# 当前为项目站，仓库名 geraint.github.io
+baseurl: "/geraint.github.io"
+url: ""
+
+# 官方内置主题，无第三方 CDN，最安全
+theme: minima
+
+# 语言
+lang: zh
+
+# 关闭博客动态，纯静态
+plugins: []

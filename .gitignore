@@ -1,0 +1,44 @@
+# Jekyll 构建产物
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Ruby / Gem
+Gemfile.lock
+vendor/
+
+# ===== 敏感信息，禁止提交 =====
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+id_rsa
+id_rsa.pub
+
+# 各类配置文件（可能含密钥/token）
+config.ini
+*.ini
+credentials*
+secret*
+*token*
+*.secret
+
+# ===== 编辑器/系统 =====
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# ===== 依赖/缓存 =====
+node_modules/
+__pycache__/
+*.pyc
+
+# ===== 打包产物 =====
+dist/
+build/
+*.exe
