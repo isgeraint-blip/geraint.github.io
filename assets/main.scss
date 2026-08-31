@@ -295,8 +295,8 @@ code {
 
 pre {
   background: #0d1117;
-  border: 1px solid rgba(240, 246, 252, 0.1);
-  border-radius: 10px;
+  border: 1px solid rgba(240, 246, 252, 0.15);
+  border-radius: 12px;
   padding: 16px 20px;
   overflow-x: auto;
   color: #e6edf3;
@@ -309,10 +309,10 @@ pre code {
 }
 
 /* ===== 深色语法高亮（GitHub Dark） ===== */
+/* 外层高亮容器透明，圆角深色块由 pre 自身呈现，避免直角背景色块 */
 .highlight,
-.highlighter-rouge .highlight,
-pre.highlight {
-  background: #0d1117;
+.highlighter-rouge .highlight {
+  background: transparent;
 }
 
 /* 兜底：所有 token 默认亮色，覆盖 minima 默认的深色值 */
