@@ -365,9 +365,9 @@ table th {
   font-weight: 600;
 }
 
-/* 覆盖 minima 默认的浅色斑马纹 #f7f7f7 */
+/* 覆盖 minima 默认的浅色斑马纹，使数据行背景一致 */
 table tr:nth-child(even) {
-  background-color: rgba(110, 118, 129, 0.08);
+  background-color: transparent;
 }
 
 /* Wiki 分类导航卡片 */
