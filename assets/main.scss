@@ -342,28 +342,29 @@ pre code {
 .highlight .err { color: #ff7b72; background: transparent; }
 .highlight .gd, .highlight .gi, .highlight .gh { background: transparent; }
 
-/* ===== 表格 ===== */
+/* ===== 表格：白字 + 深色背景，与整体一致 ===== */
 table {
   width: 100%;
   border-collapse: collapse;
   margin: 1.2em 0;
+  border: none;
 }
 
-th,
-td {
+table th,
+table td {
   border: 1px solid rgba(240, 246, 252, 0.12);
   padding: 10px 14px;
   text-align: left;
-  color: #c9d1d9;
+  color: #e6edf3;
 }
 
-th {
+table th {
   background: rgba(33, 38, 47, 0.9);
-  color: #58a6ff;
+  color: #ffffff;
   font-weight: 600;
 }
 
-tr:nth-child(even) td {
+table tr:nth-child(even) td {
   background: rgba(110, 118, 129, 0.06);
 }
 
