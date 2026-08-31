@@ -15,5 +15,16 @@ theme: minima
 # 语言
 lang: zh
 
+# 顶部导航（按顺序显示：Wiki、关于）
+header_pages:
+  - wiki.md
+  - about.md
+
+# Wiki 知识库（渗透测试 / 安全加固 / 应急响应）
+collections:
+  wiki:
+    output: true
+    permalink: /wiki/:path/
+
 # 关闭博客动态，纯静态
 plugins: []

@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<div class="home">
+  <h1 class="page-heading">{{ page.title }}</h1>
+  {{ content }}
+
+  {%- assign docs = site.wiki | where: "group", page.group -%}
+  <ul class="post-list">
+    {%- for doc in docs -%}
+    <li>
+      <h3>
+        <a class="post-link" href="{{ doc.url | relative_url }}">{{ doc.title | escape }}</a>
+      </h3>
+    </li>
+    {%- endfor -%}
+  </ul>
+</div>
