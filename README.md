@@ -1,4 +1,4 @@
-# 我的技术博客
+# Geraint的技术博客
 
 基于 [Jekyll](https://jekyllrb.com) + GitHub Pages 的个人技术博客，分享安全研究、漏洞挖掘、开发笔记。
 
@@ -21,7 +21,7 @@
 layout: post
 title: "文章标题"
 date: 2026-08-31
-categories: 分类
+categories: [红队, 渗透测试, SQL注入]   # 红队：渗透测试 / 蓝队：应急响应、安全加固
 ---
 正文...
 ```

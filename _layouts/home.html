@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+  {%- if site.posts.size > 0 -%}
+    <h2 class="post-list-heading">{{ page.list_title | default: "文章列表" }}</h2>
+    <ul class="post-list">
+      {%- for post in site.posts -%}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
+        {%- assign role = post.categories | first -%}
+        {%- if role contains "红" -%}
+          <span class="role-badge role-red">{{ role }}</span>
+        {%- elsif role contains "蓝" -%}
+          <span class="role-badge role-blue">{{ role }}</span>
+        {%- endif -%}
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </h3>
+        {%- if post.categories.size > 1 -%}
+          <span class="post-cats">{{ post.categories | join: " · " }}</span>
+        {%- endif -%}
+      </li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+</div>

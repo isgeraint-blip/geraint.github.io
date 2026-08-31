@@ -118,6 +118,32 @@ pre {
   background: transparent;
 }
 
+/* ===== 红队 / 蓝队徽标 ===== */
+.role-badge {
+  display: inline-block;
+  font-size: 12px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  color: #ffffff;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.role-red {
+  background: #e5484d;
+}
+
+.role-blue {
+  background: #3b82f6;
+}
+
+.post-cats {
+  display: block;
+  color: #8b919b;
+  font-size: 13px;
+  margin-top: 2px;
+}
+
 /* ===== 移动端适配 ===== */
 @media (max-width: 600px) {
   .post-list > li {
