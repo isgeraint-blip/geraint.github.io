@@ -4,37 +4,61 @@
 @import "minima";
 
 /* ================================================================
-   现代卡片风自定义样式（仅本地，无第三方 CDN / JS）
+   深色主题：午夜蓝背景 + 玻璃拟态 + 琥珀金强调
+   仅本地资源，无第三方 CDN / JS
    ================================================================ */
 
+/* ===== 全局背景与文字 ===== */
 body {
-  background-color: #f5f6f8;
-  color: #1c1f26;
+  background-color: #0b1b2b;
+  background-image: linear-gradient(180deg, #0b1b2b 0%, #12243a 55%, #1b2a3a 100%);
+  background-attachment: fixed;
+  color: #f0f4f8;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   line-height: 1.7;
 }
 
-/* 容器：加宽 + 留白，避免贴边 */
+h1, h2, h3, h4, h5, h6 {
+  color: #f0f4f8;
+}
+
+a {
+  color: #f5a623;
+}
+
+a:hover {
+  color: #ffc94d;
+}
+
+/* ===== 容器：加宽 + 留白，避免贴边 ===== */
 .wrapper {
   max-width: 960px;
   padding: 0 24px;
 }
 
+/* ===== 顶部导航：暗部 + 玻璃拟态 ===== */
 .site-header {
-  background: #ffffff;
+  background: rgba(10, 15, 20, 0.7);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
   border-top: none;
-  border-bottom: 1px solid #ececf1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .site-title,
 .site-title:visited {
   font-weight: 700;
-  color: #1c1f26;
+  color: #f0f4f8;
 }
 
-a {
-  color: #4f7cff;
+.site-nav .page-link,
+.site-nav .page-link:visited {
+  color: #e6e6e6;
+}
+
+.site-nav .page-link:hover {
+  color: #f5a623;
 }
 
 .page-content {
@@ -46,31 +70,35 @@ a {
   font-size: 30px;
   font-weight: 700;
   margin-bottom: 24px;
+  color: #f0f4f8;
 }
 
-/* ===== 列表卡片 ===== */
+/* ===== 列表卡片：玻璃拟态 ===== */
 .post-list {
   margin-left: 0;
   list-style: none;
 }
 
 .post-list > li {
-  background: #ffffff;
-  border: 1px solid #ececf1;
+  background: rgba(27, 42, 58, 0.55);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 14px;
-  padding: 22px 26px;
+  padding: 22px 28px;
   margin-bottom: 18px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
-  transition: transform 0.16s ease, box-shadow 0.16s ease;
+  transition: transform 0.16s ease, box-shadow 0.16s ease,
+    border-color 0.16s ease;
 }
 
 .post-list > li:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+  border-color: rgba(245, 166, 35, 0.5);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
 .post-list .post-meta {
-  color: #8b919b;
+  color: rgba(230, 230, 230, 0.5);
   font-size: 14px;
 }
 
@@ -79,34 +107,54 @@ a {
 }
 
 .post-list .post-link {
-  color: #1c1f26;
+  color: #f0f4f8;
   font-weight: 600;
 }
 
 .post-list .post-link:hover {
-  color: #4f7cff;
+  color: #ffc94d;
 }
 
-/* ===== 正文 / 文档卡片（解决贴边） ===== */
+/* ===== 正文 / 文档卡片：玻璃拟态 + 大内边距（解决贴边） ===== */
 .post {
-  background: #ffffff;
-  border: 1px solid #ececf1;
-  border-radius: 14px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
-  padding: 36px 44px;
+  background: rgba(27, 42, 58, 0.55);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  padding: 40px 52px;
 }
 
 .post-title {
   font-weight: 700;
+  color: #f0f4f8;
 }
 
-/* 正文排版间距 */
+.post-header .post-meta {
+  color: rgba(230, 230, 230, 0.5);
+}
+
+.post-content {
+  color: #e6e6e6;
+}
+
 .post-content h1,
 .post-content h2,
 .post-content h3,
 .post-content h4 {
-  margin-top: 1.5em;
-  margin-bottom: 0.6em;
+  color: #f0f4f8;
+  margin-top: 1.6em;
+  margin-bottom: 0.7em;
+}
+
+.post-content h2 {
+  border-left: 4px solid #f5a623;
+  padding-left: 14px;
+}
+
+.post-content h3 {
+  color: #ffc94d;
 }
 
 .post-content p {
@@ -117,43 +165,110 @@ a {
   margin: 0.25em 0;
 }
 
+.post-content a {
+  color: #f5a623;
+}
+
+.post-content blockquote {
+  border-left: 4px solid rgba(245, 166, 35, 0.5);
+  color: rgba(230, 230, 230, 0.85);
+}
+
+.post-content strong {
+  color: #ffc94d;
+}
+
+hr {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
 /* ===== 代码块 ===== */
 pre,
 code {
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
 }
 
+code {
+  color: #ffc94d;
+  background: rgba(10, 15, 20, 0.5);
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
 pre {
-  background: #f6f8fa;
-  border: 1px solid #ececf1;
+  background: rgba(10, 15, 20, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
-  padding: 16px 18px;
+  padding: 16px 20px;
   overflow-x: auto;
 }
+
+pre code {
+  color: #e6e6e6;
+  background: transparent;
+  padding: 0;
+}
+
+/* ===== 深色语法高亮 ===== */
+.highlight {
+  background: transparent;
+}
+
+.highlight .kd, .highlight .k, .highlight .kn,
+.highlight .kr, .highlight .kt, .highlight .kc,
+.highlight .kp { color: #ffc94d; font-weight: bold; }
+.highlight .s, .highlight .s1, .highlight .s2,
+.highlight .sb, .highlight .sd, .highlight .sx { color: #7ee787; }
+.highlight .c, .highlight .c1, .highlight .cm,
+.highlight .cd, .highlight .cp { color: #8b949e; font-style: italic; }
+.highlight .m, .highlight .mi, .highlight .mf,
+.highlight .mh, .highlight .mo { color: #79c0ff; }
+.highlight .nf { color: #d2a8ff; }
+.highlight .nb, .highlight .na, .highlight .no,
+.highlight .nv { color: #79c0ff; }
+.highlight .o { color: #ffb84d; }
+.highlight .nc, .highlight .nn { color: #ffa657; }
+.highlight .nt { color: #ff7b72; }
+.highlight .p { color: #e6e6e6; }
+.highlight .err { color: #ff7b72; background: transparent; }
+.highlight .gd, .highlight .gi, .highlight .gh { background: transparent; }
 
 /* ===== 表格 ===== */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: 1em 0;
+  margin: 1.2em 0;
+  display: block;
+  overflow-x: auto;
 }
 
 th,
 td {
-  border: 1px solid #e6e8ee;
-  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 10px 14px;
   text-align: left;
+  color: #e6e6e6;
 }
 
 th {
-  background: #f6f8fa;
+  background: rgba(27, 42, 58, 0.9);
+  color: #ffc94d;
   font-weight: 600;
+}
+
+tr:nth-child(even) td {
+  background: rgba(255, 255, 255, 0.02);
 }
 
 /* ===== 页脚 ===== */
 .site-footer {
-  border-top: 1px solid #ececf1;
-  background: transparent;
+  background: #0a0f14;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(230, 230, 230, 0.6);
+}
+
+.site-footer a {
+  color: #f5a623;
 }
 
 /* ===== 移动端适配 ===== */
