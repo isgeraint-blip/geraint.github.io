@@ -11,6 +11,7 @@ group: "安全加固"
 #### 加固项
 
 1. **删除无用账户**
+
 ```bash
 # 检查非系统账户
 awk -F: '($3 >= 1000) {print $1}' /etc/passwd
@@ -19,9 +20,11 @@ userdel <username>
 ```
 
 2. **锁定默认账户**
+
 ```bash
 passwd -l root  # 禁止root直接登录（需先配置sudo）
 ```
+
 #### 验证方式
 
 ```bash
@@ -32,6 +35,7 @@ cat /etc/passwd | grep -E "nologin|false"  # 确认无可用shell账户
 
 #### 配置文件
 `/etc/login.defs` 和 `/etc/security/pwquality.conf`
+
 #### 加固项
 
 |   |   |
@@ -54,6 +58,7 @@ chage -M 90 <username>  # 修改现有用户密码有效期
 ### 2.1 配置文件修改
 #### 文件路径
 `/etc/ssh/sshd_config`
+
 #### 关键配置项
 
 ```properties
@@ -63,6 +68,7 @@ MaxAuthTries 3                 # 最大认证尝试次数
 ClientAliveInterval 300        # 会话超时5分钟
 AllowUsers user1 user2        # 仅允许指定用户登录
 ```
+
 #### 生效命令
 
 ```bash
@@ -73,6 +79,7 @@ systemctl restart sshd
 #### 操作步骤
 
 1. 生成ED25519密钥：
+
 ```bash
 ssh-keygen -t ed25519 -a 100
 ```
@@ -83,6 +90,7 @@ ssh-keygen -t ed25519 -a 100
 Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com
 MACs hmac-sha2-512-etm@openssh.com
 ```
+
 #### 验证方式
 
 ```bash
@@ -133,6 +141,7 @@ firewall-cmd --permanent --add-service=ssh  # 放行SSH
 firewall-cmd --permanent --remove-service=dhcpv6-client  # 关闭无用服务
 firewall-cmd --reload
 ```
+
 #### 基线规则
 
 - 默认策略：`block`（入站）/ `allow`（出站）
@@ -143,6 +152,7 @@ firewall-cmd --reload
 
 #### 配置文件
 `/etc/sysctl.conf`
+
 #### 关键参数
 
 ```properties
@@ -169,6 +179,7 @@ sysctl -p
 -a always,exit -F arch=b64 -S execve  # 记录所有执行命令
 -w /etc/passwd -p wa -k user_accounts  # 监控密码文件修改
 ```
+
 #### 日志查询
 
 ```bash
